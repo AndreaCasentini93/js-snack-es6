@@ -1,0 +1,72 @@
+/* COMMONS */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    background-image: url("../img/sfondo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #A9C765;
+}
+p {
+    font-size: 18px;
+}
+li {
+    margin: 18px 0;
+    font-size: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: unset;
+    margin: 5px 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 0px 2px #000000;
+    background-color: #A9C765;
+    box-shadow: inset 0px 0px 7px #000000;
+    cursor: pointer;
+    transition: transform .2s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* SNACK 1 */
+#snack-1 {
+    text-align: center;
+}
+
+/* SNACK 2 */
+#snack-2 #value {
+    color: #A9C765;
+}
