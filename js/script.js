@@ -44,8 +44,11 @@ for (let i = 0; i < bicycles.length; i++){
 
 }
 
+// Assegna delle variabili al nome e al peso della bici leggera
+let {name, weight} = lightBike;
+
 // Stampa su HTML la bicicletta con il peso minore
-lightBikeParagraph.innerHTML = `La bici ${lightBike.name} pesa ${lightBike.weight} Kg ed è la più leggera`;
+lightBikeParagraph.innerHTML = `La bici ${name} pesa ${weight} Kg ed è la più leggera`;
 //=====================/SNACK 1==============================
 
 
@@ -111,7 +114,10 @@ for (let i = 0; i < footballTeams.length; i++) {
     statistics.fouls = footballTeams[i].fouls;
     statisticsFootballTeams.push(statistics)
 
+    // Assegna delle variabili al nome e i falli fatti dalle squadre
+    let {name, fouls} = statisticsFootballTeams[i];
+
     // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
-    footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${statisticsFootballTeams[i].name} </span><br>Falli commessi =<span id=\"value\"> ${statisticsFootballTeams[i].fouls} </span></li>`
+    footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${name} </span><br>Falli commessi =<span id=\"value\"> ${fouls} </span></li>`
 }
 //=====================/SNACK 2==============================
