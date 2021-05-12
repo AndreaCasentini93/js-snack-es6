@@ -1,11 +1,6 @@
-/*
-Snack 1
-Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare a schermo la bici con peso minore utilizzando destructuring e template literal.
-*/
-
 //======================SNACK 1==============================
 //-----------------------ARRAY-------------------------------
-var bicycles = [
+const bicycles = [
     {
         name: "Cargo",
         weight: 6.8
@@ -34,23 +29,23 @@ var bicycles = [
 //----------------------/ARRAY-------------------------------
 
 //----------------------CONST-LET-VAR------------------------
-var lightBike;
-var lightBikeWeight = bicycles[0].weight;
-var lessWeightBike = document.getElementById("less-weight-bike");
+const lightBikeParagraph = document.getElementById("light-bike-paragraph");
+let lightBike = bicycles[0];
 //---------------------/CONST-LET-VAR------------------------
 
 // Scorri tutti gli oggetti presenti nell'array "bicycles" e seleziona la bicicletta con il peso minore
-for (var i = 0; i < bicycles.length; i++) {
+for (let i = 0; i < bicycles.length; i++){
 
-    if (bicycles[i].weight <= lightBikeWeight) {
-        lightBikeWeight = bicycles[i].weight;
+    let {weight} = bicycles[i];
+
+    if (weight < lightBike.weight) {
         lightBike = bicycles[i];
     }
 
 }
 
 // Stampa su HTML la bicicletta con il peso minore
-lessWeightBike.innerHTML = `La bici ${lightBike.name} pesa ${lightBike.weight} Kg ed è la più leggera`;
+lightBikeParagraph.innerHTML = `La bici ${lightBike.name} pesa ${lightBike.weight} Kg ed è la più leggera`;
 //=====================/SNACK 1==============================
 
 
