@@ -50,7 +50,7 @@ for (var i = 0; i < bicycles.length; i++) {
 }
 
 // Stampa su HTML la bicicletta con il peso minore
-lessWeightBike.innerHTML = "La bici dal nome " + lightBike.name + " pesa " + lightBike.weight + " Kg ed è la più leggera.";
+lessWeightBike.innerHTML = `La bici ${lightBike.name} pesa ${lightBike.weight} Kg ed è la più leggera`;
 //=====================/SNACK 1==============================
 
 
