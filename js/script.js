@@ -106,13 +106,8 @@ for (let i = 0; i < footballTeams.length; i++) {
     footballTeams[i].fouls = getRandomNumber(0, 100);
 
     // Genera un nuovo array i cui elementi contengono solo nomi e falli subiti
-    let statistics = {};
-    statistics.name = footballTeams[i].name;
-    statistics.fouls = footballTeams[i].fouls;
-    statisticsFootballTeams.push(statistics);
-
-    // Assegna delle variabili al nome e i falli fatti dalle squadre
-    let {name, fouls} = statisticsFootballTeams[i];
+    let {name, fouls} = footballTeams[i];
+    statisticsFootballTeams.push({name, fouls});
 
     // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
     footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${name} </span><br>Falli commessi =<span id=\"value\"> ${fouls} </span></li>`;
