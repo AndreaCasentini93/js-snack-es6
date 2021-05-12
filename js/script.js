@@ -109,12 +109,12 @@ for (let i = 0; i < footballTeams.length; i++) {
     let statistics = {};
     statistics.name = footballTeams[i].name;
     statistics.fouls = footballTeams[i].fouls;
-    statisticsFootballTeams.push(statistics)
+    statisticsFootballTeams.push(statistics);
 
     // Assegna delle variabili al nome e i falli fatti dalle squadre
     let {name, fouls} = statisticsFootballTeams[i];
 
     // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
-    footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${name} </span><br>Falli commessi =<span id=\"value\"> ${fouls} </span></li>`
+    footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${name} </span><br>Falli commessi =<span id=\"value\"> ${fouls} </span></li>`;
 }
 //=====================/SNACK 2==============================
