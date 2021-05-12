@@ -56,13 +56,11 @@ Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse prop
 
 //======================SNACK 2==============================
 //-----------------------FUNZIONI----------------------------
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 //-----------------------/FUNZIONI---------------------------
 
 //-----------------------ARRAY-------------------------------
-var footballTeams = [
+const footballTeams = [
     {
        name: "Inter",
        points: 0,
@@ -94,26 +92,26 @@ var footballTeams = [
        fouls: 0
     },
 ];
-var statisticsFootballTeams = [];
+let statisticsFootballTeams = [];
 //----------------------/ARRAY-------------------------------
 
 //----------------------CONST-LET-VAR------------------------
-var footballTeamsList = document.getElementById("football-teams-list");
+const footballTeamsList = document.getElementById("football-teams-list");
 //---------------------/CONST-LET-VAR------------------------
 
-for (i = 0; i < footballTeams.length; i++) {
+for (let i = 0; i < footballTeams.length; i++) {
 
     // Genera numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
-    footballTeams[i].points = randomNumber(0, 100);
-    footballTeams[i].fouls = randomNumber(0, 100);
+    footballTeams[i].points = getRandomNumber(0, 100);
+    footballTeams[i].fouls = getRandomNumber(0, 100);
 
     // Genera un nuovo array i cui elementi contengono solo nomi e falli subiti
-    var statistics = {};
+    let statistics = {};
     statistics.name = footballTeams[i].name;
     statistics.fouls = footballTeams[i].fouls;
     statisticsFootballTeams.push(statistics)
 
     // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
-    footballTeamsList.innerHTML += "<li>Squadra = <span id=\"value\">" + statisticsFootballTeams[i].name + "</span><br>Falli commessi = <span id=\"value\">" + statisticsFootballTeams[i].fouls + "</span></li>";
+    footballTeamsList.innerHTML += `<li>Squadra =<span id=\"value\"> ${statisticsFootballTeams[i].name} </span><br>Falli commessi =<span id=\"value\"> ${statisticsFootballTeams[i].fouls} </span></li>`
 }
 //=====================/SNACK 2==============================
